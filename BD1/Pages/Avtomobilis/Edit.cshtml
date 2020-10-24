@@ -1,0 +1,80 @@
+﻿@page
+@model BD1.Pages.Avtomobilis.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Avtomobili</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Avtomobili.ID" />
+            <div class="form-group">
+                <label asp-for="Avtomobili.Registr_nomer" class="control-label"></label>
+                <input asp-for="Avtomobili.Registr_nomer" class="form-control" />
+                <span asp-validation-for="Avtomobili.Registr_nomer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Nomer_kyzova" class="control-label"></label>
+                <input asp-for="Avtomobili.Nomer_kyzova" class="form-control" />
+                <span asp-validation-for="Avtomobili.Nomer_kyzova" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Nomer_dvigatelya" class="control-label"></label>
+                <input asp-for="Avtomobili.Nomer_dvigatelya" class="form-control" />
+                <span asp-validation-for="Avtomobili.Nomer_dvigatelya" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.God_vipyska" class="control-label"></label>
+                <input asp-for="Avtomobili.God_vipyska" class="form-control" />
+                <span asp-validation-for="Avtomobili.God_vipyska" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Probeg" class="control-label"></label>
+                <input asp-for="Avtomobili.Probeg" class="form-control" />
+                <span asp-validation-for="Avtomobili.Probeg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Cena_avto" class="control-label"></label>
+                <input asp-for="Avtomobili.Cena_avto" class="form-control" />
+                <span asp-validation-for="Avtomobili.Cena_avto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Cena_dlya_prokata" class="control-label"></label>
+                <input asp-for="Avtomobili.Cena_dlya_prokata" class="form-control" />
+                <span asp-validation-for="Avtomobili.Cena_dlya_prokata" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Data_poslednego_TO" class="control-label"></label>
+                <input asp-for="Avtomobili.Data_poslednego_TO" class="form-control" />
+                <span asp-validation-for="Avtomobili.Data_poslednego_TO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Spec_otmetki" class="control-label"></label>
+                <input asp-for="Avtomobili.Spec_otmetki" class="form-control" />
+                <span asp-validation-for="Avtomobili.Spec_otmetki" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtomobili.Otmetka_o_vozraste" class="control-label"></label>
+                <input asp-for="Avtomobili.Otmetka_o_vozraste" class="form-control" />
+                <span asp-validation-for="Avtomobili.Otmetka_o_vozraste" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

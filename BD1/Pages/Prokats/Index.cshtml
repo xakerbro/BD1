@@ -1,0 +1,60 @@
+﻿@page
+@model BD1.Pages.Prokats.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Prokat[0].Data_vidachi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prokat[0].Srok_prokata)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prokat[0].Data_vozvrata)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prokat[0].Cena_prokata)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prokat[0].Otmetka_ob_oplate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Prokat) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_vidachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Srok_prokata)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_vozvrata)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cena_prokata)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otmetka_ob_oplate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

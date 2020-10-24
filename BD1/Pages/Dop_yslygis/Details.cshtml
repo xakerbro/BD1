@@ -1,0 +1,55 @@
+﻿@page
+@model BD1.Pages.Dop_yslygis.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dop_yslygi</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dop_yslygi.Naimenovanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dop_yslygi.Naimenovanie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dop_yslygi.Opisanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dop_yslygi.Opisanie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dop_yslygi.Cena)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dop_yslygi.Cena)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dop_yslygi.Kod_prokata)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dop_yslygi.Kod_prokata)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dop_yslygi.Kod_yslygi_3Kod_prokata)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dop_yslygi.Kod_yslygi_3Kod_prokata)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dop_yslygi.Kod_yslygi_2Kod_prokata)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dop_yslygi.Kod_yslygi_2Kod_prokata)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Dop_yslygi.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

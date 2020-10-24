@@ -1,0 +1,82 @@
+﻿@page
+@model BD1.Pages.Avtomobilis.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Avtomobili</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Registr_nomer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Registr_nomer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Nomer_kyzova)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Nomer_kyzova)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Nomer_dvigatelya)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Nomer_dvigatelya)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.God_vipyska)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.God_vipyska)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Probeg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Probeg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Cena_avto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Cena_avto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Cena_dlya_prokata)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Cena_dlya_prokata)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Data_poslednego_TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Data_poslednego_TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Spec_otmetki)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Spec_otmetki)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Avtomobili.Otmetka_o_vozraste)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Avtomobili.Otmetka_o_vozraste)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Avtomobili.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

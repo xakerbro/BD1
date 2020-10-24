@@ -1,0 +1,90 @@
+﻿@page
+@model BD1.Pages.Avtomobilis.IndexModel
+
+@{
+    ViewData["Title"] = "Автомобили";
+}
+
+<h1>Автомобили</h1>
+
+<p>
+    <a asp-page="Create">Создать строку</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Registr_nomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Nomer_kyzova)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Nomer_dvigatelya)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].God_vipyska)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Probeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Cena_avto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Cena_dlya_prokata)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Data_poslednego_TO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Spec_otmetki)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Avtomobili[0].Otmetka_o_vozraste)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Avtomobili) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Registr_nomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nomer_kyzova)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nomer_dvigatelya)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.God_vipyska)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Probeg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cena_avto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cena_dlya_prokata)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_poslednego_TO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spec_otmetki)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otmetka_o_vozraste)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

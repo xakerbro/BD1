@@ -1,0 +1,37 @@
+﻿@page
+@model BD1.Pages.Marki_avtomobileys.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Marki_avtomobiley</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Marki_avtomobiley.Naimenovanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Marki_avtomobiley.Naimenovanie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Marki_avtomobiley.Tech_harakteristiki)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Marki_avtomobiley.Tech_harakteristiki)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Marki_avtomobiley.Opisanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Marki_avtomobiley.Opisanie)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Marki_avtomobiley.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
